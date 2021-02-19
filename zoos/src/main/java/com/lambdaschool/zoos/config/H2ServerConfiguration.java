@@ -1,4 +1,4 @@
-package com.lambda.zoos.config;
+package com.lambdaschool.zoos.config;
 
 import org.h2.tools.Server;
 import org.springframework.beans.factory.annotation.Value;

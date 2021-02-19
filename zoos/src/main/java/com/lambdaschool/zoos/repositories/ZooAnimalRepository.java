@@ -1,7 +1,7 @@
 package com.lambdaschool.zoos.repositories;
 
-import com.lambdaschool.zoos.models.ZooAnimal;
+import com.lambdaschool.zoos.models.ZooAnimals;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ZooAnimalRepository extends CrudRepository<ZooAnimal, Long> {
+public interface ZooAnimalRepository extends CrudRepository<ZooAnimals, Long> {
 }

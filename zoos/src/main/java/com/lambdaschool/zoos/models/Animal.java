@@ -15,14 +15,16 @@ public class Animal extends Auditable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long animalid;
 
+    @Column(nullable = false, unique = true)
     private String animaltype;
 
-    @OneToMany(mappedBy = "zoo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnoreProperties(value = "animal")
-    private Set<ZooAnimal> zoos = new HashSet<>();
+    private Set<ZooAnimals> zoos = new HashSet<>();
 
     public Animal()
     {
+
     }
 
     public Animal(String animaltype) {
@@ -45,11 +47,11 @@ public class Animal extends Auditable
         this.animaltype = animaltype;
     }
 
-    public Set<ZooAnimal> getZoos() {
+    public Set<ZooAnimals> getZoos() {
         return zoos;
     }
 
-    public void setZoos(Set<ZooAnimal> zoos) {
+    public void setZoos(Set<ZooAnimals> zoos) {
         this.zoos = zoos;
     }
 }
